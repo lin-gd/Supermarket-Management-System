@@ -117,7 +117,7 @@ public class HomePage extends javax.swing.JFrame {
         
          try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","chen","Dsouzacompound1");
+            conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","username","password");
            String f=CID.getSelectedItem().toString();
            st=conn.createStatement();
            rs=st.executeQuery("select cashierid ,cashiername from cashier where cashierid='"+f+"'");
@@ -159,7 +159,7 @@ public class HomePage extends javax.swing.JFrame {
          try {
             CID.removeAllItems();
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","chen","Dsouzacompound1");
+            conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","username","password");
             st=conn.createStatement();
             rs=st.executeQuery("select cashierid from cashier");
             while(rs.next()){
