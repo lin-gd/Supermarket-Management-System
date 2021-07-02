@@ -270,7 +270,7 @@ public final class billPage extends javax.swing.JFrame {
        
         int a=Integer.parseInt(total.getText());
         Class.forName("oracle.jdbc.driver.OracleDriver");
-        conn=java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","chen","Dsouzacompound1");
+        conn=java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","username","password");
         PreparedStatement ps=conn.prepareStatement("insert into bill(billno,billcost,billdate,cusid,cashierid) VALUES(?,?,?,?,?)");
         ps.setString(1, billno.getText());
         ps.setInt(2, a);
