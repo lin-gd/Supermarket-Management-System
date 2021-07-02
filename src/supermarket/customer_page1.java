@@ -195,7 +195,7 @@ public class customer_page1 extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "chen", "Dsouzacompound1");
+            conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "username", "password");
             pst = conn.prepareStatement("insert into Customer(cusid,cusname,cusmob) values(?,?,?)");
             pst.setString(1, cus_id.getText());
             pst.setString(2, cus_name.getText());
@@ -283,7 +283,7 @@ public class customer_page1 extends javax.swing.JFrame {
     /*private void display1(){
     try {
         Class.forName("oracle.jdbc.driver.OracleDriver");
-        conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","SYSTEM","Dsouzacompound1");
+        conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","username","passsword");
         st=conn.createStatement();
         rs=st.executeQuery("select * from CUSTOMER");
          
