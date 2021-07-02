@@ -337,7 +337,7 @@ public class search_customer extends javax.swing.JFrame {
 private void display1(){
     try {
         Class.forName("oracle.jdbc.driver.OracleDriver");
-        conn=java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","chen","Dsouzacompound1");
+        conn=java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","username","password");
         st=conn.createStatement();
         rs=st.executeQuery("select * from CUSTOMER");
         
