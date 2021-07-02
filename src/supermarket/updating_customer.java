@@ -166,7 +166,7 @@ public class updating_customer extends javax.swing.JFrame {
         try {
         // TODO add your handling code here:
         Class.forName("oracle.jdbc.driver.OracleDriver");
-        conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","chen","Dsouzacompound1");
+        conn=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","username","password");
         String s=cus_new.getText();
         String s1=cus_id.getText();
         
