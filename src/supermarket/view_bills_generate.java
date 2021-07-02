@@ -172,7 +172,7 @@ public class view_bills_generate extends javax.swing.JFrame {
         try {
             //demo1();
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "chen", "Dsouzacompound1");
+            conn = java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "username", "password");
             String sql = "DELETE FROM bill WHERE billno=?";
             try {
                 int i = bill_table.getSelectedRow();
@@ -209,7 +209,7 @@ public class view_bills_generate extends javax.swing.JFrame {
         try {
             // TODO add your handling code here:
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            conn = java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "chen", "Dsouzacompound1");
+            conn = java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE", "username", "password");
             Date date = new Date(datetext.getDate().getTime());
             st = conn.createStatement();
             String s1 = cid.getText();
