@@ -236,7 +236,7 @@ public final class product_page extends javax.swing.JFrame {
         try {
         //demo1();
         Class.forName("oracle.jdbc.driver.OracleDriver");
-        conn=java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","chen","Dsouzacompound1");
+        conn=java.sql.DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:XE","username","password");
         String s=pro_id.getSelectedItem().toString();
         st=conn.createStatement();
         rs= st.executeQuery("select proid,proname,proprice,proquantity from product where proid='"+s+"'");
